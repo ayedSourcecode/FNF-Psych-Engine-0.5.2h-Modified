@@ -35,7 +35,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		rpcTitle = 'Gameplay Settings Menu'; //for Discord Rich Presence
 
 		var option:Option = new Option('Controller Mode',
-			'Check this if you want to play with\na controller instead of using your Keyboard.',
+			'如果你想使用手机按键而不是键盘\n请选中此选项',
 			'controllerMode',
 			'bool',
 			#if android true #else false #end);
@@ -43,35 +43,35 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 
 		//I'd suggest using "Downscroll" as an example for making your own option since it is the simplest here
 		var option:Option = new Option('Downscroll', //Name
-			'If checked, notes go Down instead of Up, simple enough.', //Description
+			'选中后\n将按键移到下方变为下落', //Description
 			'downScroll', //Save data variable name
 			'bool', //Variable type
 			false); //Default value
 		addOption(option);
 
 		var option:Option = new Option('Middlescroll',
-			'If checked, your notes get centered.',
+			'选中后\n按键会移到中央',
 			'middleScroll',
 			'bool',
 			false);
 		addOption(option);
 
 		var option:Option = new Option('Ghost Tapping',
-			"If checked, you won't get misses from pressing keys\nwhile there are no notes able to be hit.",
+			"选中后, 随意按下按键\n不会算作miss和扣除血量",
 			'ghostTapping',
 			'bool',
 			true);
 		addOption(option);
 
 		var option:Option = new Option('Disable Reset Button',
-			"If checked, pressing Reset won't do anything.",
+			"选中后, 重置曲目不会发生任何改变",
 			'noReset',
 			'bool',
 			false);
 		addOption(option);
 
 		var option:Option = new Option('Hitsound Volume',
-			'Funny notes does \"Tick!\" when you hit them."',
+			'按下按键后会发出 \"Tick!\" 的响声"',
 			'hitsoundVolume',
 			'percent',
 			0);
@@ -83,7 +83,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.decimals = 1;
 
 		var option:Option = new Option('Rating Offset',
-			'Changes how late/early you have to hit for a "Sick!"\nHigher values mean you have to hit later.',
+			'画面延迟',
 			'ratingOffset',
 			'int',
 			0);
@@ -94,7 +94,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		addOption(option);
 
 		var option:Option = new Option('Sick! Hit Window',
-			'Changes the amount of time you have\nfor hitting a "Sick!" in milliseconds.',
+			'Sick的判定区域(ms)',
 			'sickWindow',
 			'int',
 			45);
@@ -105,7 +105,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		addOption(option);
 
 		var option:Option = new Option('Good Hit Window',
-			'Changes the amount of time you have\nfor hitting a "Good" in milliseconds.',
+			'good的判定区域(ms)',
 			'goodWindow',
 			'int',
 			90);
@@ -116,7 +116,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		addOption(option);
 
 		var option:Option = new Option('Bad Hit Window',
-			'Changes the amount of time you have\nfor hitting a "Bad" in milliseconds.',
+			'bad的判定区域(ms)',
 			'badWindow',
 			'int',
 			135);
@@ -127,7 +127,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		addOption(option);
 
 		var option:Option = new Option('Safe Frames',
-			'Changes how many frames you have for\nhitting a note earlier or late.',
+			'安全区',
 			'safeFrames',
 			'float',
 			10);
