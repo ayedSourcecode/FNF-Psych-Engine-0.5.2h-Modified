@@ -35,21 +35,21 @@ class VisualsUISubState extends BaseOptionsMenu
 		rpcTitle = 'Visuals & UI Settings Menu'; //for Discord Rich Presence
 
 		var option:Option = new Option('Note Splashes',
-			"If unchecked, hitting \"Sick!\" notes won't show particles.",
+			"在你获得 \"Sick!\" 评价时触发按键溅射效果",
 			'noteSplashes',
 			'bool',
 			true);
 		addOption(option);
 
 		var option:Option = new Option('Hide HUD',
-			'If checked, hides most HUD elements.',
+			'隐藏HUD',
 			'hideHud',
 			'bool',
 			false);
 		addOption(option);
 		
 		var option:Option = new Option('Time Bar:',
-			"What should the Time Bar display?",
+			"时间条显示的内容",
 			'timeBarType',
 			'string',
 			'Time Left',
@@ -57,35 +57,35 @@ class VisualsUISubState extends BaseOptionsMenu
 		addOption(option);
 
 		var option:Option = new Option('Flashing Lights',
-			"Uncheck this if you're sensitive to flashing lights!",
+			"闪  光  灯",
 			'flashing',
 			'bool',
 			true);
 		addOption(option);
 		
 		var option:Option = new Option('Kade Watermark',
-			"If unchecked, Add Watermark Like Kade (check this if you play on a custom lua ui for a better experience)",
+			"关闭后 出现一个类似于KE的水印",
 			'kadeEngineWatermark',
 			'bool',
 			true);
 		addOption(option);
 
 		var option:Option = new Option('Camera Zooms',
-			"If unchecked, the camera won't zoom in on a beat hit.",
+			"在节拍处镜头缩放",
 			'camZooms',
 			'bool',
 			true);
 		addOption(option);
 
 		var option:Option = new Option('Score Text Zoom on Hit',
-			"If unchecked, disables the Score text zooming\neverytime you hit a note.",
+			"按下按键时分数条缩放",
 			'scoreZoom',
 			'bool',
 			true);
 		addOption(option);
 
 		var option:Option = new Option('Health Bar Transparency',
-			'How much transparent should the health bar and icons be.',
+			'生命条和小图标透明度',
 			'healthBarAlpha',
 			'percent',
 			1);
@@ -97,7 +97,7 @@ class VisualsUISubState extends BaseOptionsMenu
 		addOption(option);
 		
 		var option:Option = new Option('FPS Counter',
-			'If unchecked, hides FPS Counter.',
+			'显示帧数和运存',
 			'showFPS',
 			'bool',
 			#if android false #else true #end);
@@ -105,7 +105,7 @@ class VisualsUISubState extends BaseOptionsMenu
 		option.onChange = onChangeFPSCounter;
 		
 		var option:Option = new Option('Pause Screen Song:',
-			"What song do you prefer for the Pause Screen?",
+			"暂停界面的歌曲",
 			'pauseMusic',
 			'string',
 			'Tea Time',
