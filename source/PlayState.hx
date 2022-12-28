@@ -1041,13 +1041,6 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
-		kadeEngineWatermark = new FlxText(4, healthBarBG.y + 58, 0, SONG.song, 16);
-		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
-		kadeEngineWatermark.scrollFactor.set();
-		kadeEngineWatermark.borderSize = 1.25;
-		kadeEngineWatermark.visible = !ClientPrefs.kadeEngineWatermark;
-		add(kadeEngineWatermark);
-
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
@@ -1066,7 +1059,6 @@ class PlayState extends MusicBeatState
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
-		kadeEngineWatermark.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
 		timeBarBG.cameras = [camHUD];
@@ -2324,9 +2316,9 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingName == '?') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + ratingName;
+			scoreTxt.text = '[Score]: ' + songScore + ' | [Miss]: ' + songMisses + ' | [ACC]: ' + ratingName;
 		} else {
-			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses +  ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + '(' + ratingFC + ') ' + ratingName;
+			scoreTxt.text = '[Score]: ' + songScore + ' | [Miss]: ' + songMisses +  ' | [ACC]: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + '(' + ratingFC + ') ' + ratingName;
 		}
 
 		if(botplayTxt.visible) {
