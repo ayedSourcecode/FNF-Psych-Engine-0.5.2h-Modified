@@ -142,20 +142,20 @@ class CharacterEditorState extends MusicBeatState
 		camFollow.screenCenter();
 		add(camFollow);
 
-		var tipTextArray:Array<String> = "E/Q - Camera Zoom In/Out
-		\nR - Reset Camera Zoom
-		\nJKLI - Move Camera
-		\nW/S - Previous/Next Animation
-		\nSpace - Play Animation
-		\nArrow Keys - Move Character Offset
-		\nT - Reset Current Offset
-		\nHold Shift to Move 10x faster\n".split('\n');
+		var tipTextArray:Array<String> = "E/Q - 镜头缩/放
+		\nR - 重置视角
+		\nJKLI - 移动镜头
+		\nW/S - 切换上个/下个动作
+		\nSpace - 播放动作
+		\n方向键 - 调整角色偏移
+		\nT - 重置偏移
+		\n按住Shift 十倍速度移动\n".split('\n');
 
 		for (i in 0...tipTextArray.length-1)
 		{
 			var tipText:FlxText = new FlxText(FlxG.width - 320, FlxG.height - 15 - 16 * (tipTextArray.length - i), 300, tipTextArray[i], 12);
 			tipText.cameras = [camHUD];
-			tipText.setFormat(null, 12, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE_FAST, FlxColor.BLACK);
+			tipText.setFormat(Paths.font("chinese.ttf"), 12, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE_FAST, FlxColor.BLACK);
 			tipText.scrollFactor.set();
 			tipText.borderSize = 1;
 			add(tipText);
@@ -898,7 +898,7 @@ class CharacterEditorState extends MusicBeatState
 		for (anim => offsets in char.animOffsets)
 		{
 			var text:FlxText = new FlxText(10, 20 + (18 * daLoop), 0, anim + ": " + offsets, 15);
-			text.setFormat(null, 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			text.setFormat(Paths.font("chinese.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			text.scrollFactor.set();
 			text.borderSize = 1;
 			dumbTexts.add(text);
