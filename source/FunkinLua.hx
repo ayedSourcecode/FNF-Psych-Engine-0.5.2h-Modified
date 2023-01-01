@@ -2183,10 +2183,10 @@ class ModchartSprite extends FlxSprite
 	//public var isInFront:Bool = false;
 	var hShader:DynamicShaderHandler;
 
-	public function new(?x:Float = 0, ?y:Float = 0,shaderSprite:Bool=false,type:String='', optimize:Bool = false)
+	public function new(?x:Float = 0, ?y:Float = 0, shaderSprite:Bool=false, type:String, optimize:Bool = false)
 	{
 		super(x, y);
-		antialiasing = FlxG.save.data.antialiasing;
+		antialiasing = ClientPrefs.globalAntialiasing;
 		if(shaderSprite){
 			flipY = true;
 			makeGraphic(FlxG.width, FlxG.height, FlxColor.TRANSPARENT);
