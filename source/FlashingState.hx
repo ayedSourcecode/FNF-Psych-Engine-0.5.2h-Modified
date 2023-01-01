@@ -28,9 +28,10 @@ class FlashingState extends MusicBeatState
 			This Engine made by TieGuo.\n
 			And it's modded by Psych Engine.\n
 			It's. not a true Engine!\n
-			Pressed A to continue",
+			Pressed A to continue.\n
+			按下A继续",
 			32);
-		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
+		warnText.setFormat(Paths.font("chinese.ttf"), 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
 		add(warnText);
 
