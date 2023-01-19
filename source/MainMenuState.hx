@@ -208,12 +208,13 @@ class MainMenuState extends MusicBeatState
 				MusicBeatState.switchState(new TitleState());
 			}
 			
-			if (controls.F7)
+			if (FlxG.keys.justPressed.F7)
 			{
-				selectedSomethin = true;
-				FlxG.sound.play(Paths.sound('cancelMenu'));
-				MusicBeatState.switchState(new CreditsState());
+				PlayState.SONG = Song.loadFromJson('Canell.Really', '-hard');
+				PlayState.isStoryMode = false;
+				LoadingState.loadAndSwitchState(new PlayState());
 			}
+
 
 			if (controls.ACCEPT)
 			{
