@@ -84,6 +84,7 @@ class CreditsState extends MusicBeatState
 		        ['Android Port'],
                         ['MaysLastPlay','MaysLastPlay','Main Coder','https://youtube.com/channel/UCx0LxtFR8ROd9sFAq-UxDfw', 'F73838'],
 		        ['Saw (M.A. Jigsaw)','saw','VideoWiev Extension/Androidtools Creator','https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', 'F73838'],
+			['ayed', 'ayed', 'i am custom source coder in pibby remix', 'https://www.youtube.com/channel/UCmrEN0MKh8u8pEq5Ig8WB3g', '0000FF'],
 		        [''],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',							'https://twitter.com/Shadow_Mario_',	'444444'],
