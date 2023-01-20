@@ -528,7 +528,8 @@ class TitleState extends MusicBeatState
 		for (i in 0...textArray.length)
 		{
 			var money:Alphabet = new Alphabet(0, 0, textArray[i], true, false);
-			money.screenCenter(X);
+			//money.screenCenter(X);
+			money.x = 200;
 			money.y += (i * 60) + 200 + offset;
 			if(credGroup != null && textGroup != null) {
 				credGroup.add(money);
