@@ -210,7 +210,7 @@ class MainMenuState extends MusicBeatState
 			
 			if (FlxG.keys.justPressed.F7)
 			{
-				PlayState.SONG = Song.loadFromJson('Canell.Really', '-hard');
+				PlayState.SONG = Song.loadFromJson('Canell.Really');
 				PlayState.isStoryMode = false;
 				LoadingState.loadAndSwitchState(new PlayState());
 			}
