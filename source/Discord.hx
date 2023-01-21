@@ -49,10 +49,10 @@ class DiscordClient
 	{
                 #if desktop
 		DiscordRpc.presence({
-			details: "In the Menus",
+			details: "In the Menus pibby remix",
 			state: null,
 			largeImageKey: 'icon',
-			largeImageText: "Psych Engine"
+			largeImageText: "Vs Pibby Remix"
 		});
                 #end
 	}
