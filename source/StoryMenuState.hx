@@ -12,6 +12,7 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxGroup;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
+import flixel.FlxSound;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
@@ -208,6 +209,11 @@ class StoryMenuState extends MusicBeatState
 		scoreText.text = "WEEK SCORE:" + lerpScore;
 
 		// FlxG.watch.addQuick('font', scoreText.font);
+		if(FlxG.sound.music == null) {
+			FlxG.sound.playMusic(Paths.music('StoryMenu'), 0);
+
+			FlxG.sound.music.fadeIn(4, 0, 0.7);
+		}
 
 		if (!movedBack && !selectedWeek)
 		{
