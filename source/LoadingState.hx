@@ -40,19 +40,19 @@ class LoadingState extends MusicBeatState
 		this.directory = directory;
 	}
 
-	var funkay:FlxSprite;
+	var loadingPibby:FlxSprite;
 	var loadBar:FlxSprite;
 	override function create()
 	{
 		var bg:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, 0xffcaff4d);
 		add(bg);
-		funkay = new FlxSprite(0, 0).loadGraphic(Paths.getPath('images/funkay.png', IMAGE));
-		funkay.setGraphicSize(0, FlxG.height);
-		funkay.updateHitbox();
-		funkay.antialiasing = ClientPrefs.globalAntialiasing;
-		add(funkay);
-		funkay.scrollFactor.set();
-		funkay.screenCenter();
+		loadingPibby = new FlxSprite(0, 0).loadGraphic(Paths.getPath('images/loadingPibby.png', IMAGE));
+		loadingPibby.setGraphicSize(0, FlxG.height);
+		loadingPibby.updateHitbox();
+		loadingPibby.antialiasing = ClientPrefs.globalAntialiasing;
+		add(loadingPibby);
+		loadingPibby.scrollFactor.set();
+		loadingPibby.screenCenter();
 
 		loadBar = new FlxSprite(0, FlxG.height - 20).makeGraphic(FlxG.width, 10, 0xffff16d2);
 		loadBar.screenCenter(X);
@@ -113,12 +113,12 @@ class LoadingState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
-		funkay.setGraphicSize(Std.int(0.88 * FlxG.width + 0.9 * (funkay.width - 0.88 * FlxG.width)));
-		funkay.updateHitbox();
+		loadingPibby.setGraphicSize(Std.int(0.88 * FlxG.width + 0.9 * (loadingPibby.width - 0.88 * FlxG.width)));
+		loadingPibby.updateHitbox();
 		if(controls.ACCEPT)
 		{
-			funkay.setGraphicSize(Std.int(funkay.width + 60));
-			funkay.updateHitbox();
+			loadingPibby.setGraphicSize(Std.int(loadingPibby.width + 60));
+			loadingPibby.updateHitbox();
 		}
 
 		if(callbacks != null) {
