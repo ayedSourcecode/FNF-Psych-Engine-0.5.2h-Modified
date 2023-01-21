@@ -272,7 +272,7 @@ class StoryMenuState extends MusicBeatState
 			MusicBeatState.switchState(new MainMenuState());
 		}
 
-		if (controls.SPACE)
+		if (FlxG.keys.justPressed.F10)
 		{
 			FlxG.sound.play(Paths.sound('scrollMenu'));
 			movedBack = false;
