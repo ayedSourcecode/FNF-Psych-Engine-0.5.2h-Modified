@@ -373,8 +373,8 @@ class TitleState extends MusicBeatState
 		ngSpr.visible = false;
 		ngSpr.setGraphicSize(Std.int(ngSpr.width * 0.8));
 		ngSpr.updateHitbox();
-		//ngSpr.screenCenter(X);
-		ngSpr.x = 200;
+		ngSpr.screenCenter(X);
+		//ngSpr.x = 200;
 		ngSpr.antialiasing = ClientPrefs.globalAntialiasing;
 
 		FlxTween.tween(credTextShit, {y: credTextShit.y + 20}, 2.9, {ease: FlxEase.quadInOut, type: PINGPONG});
@@ -542,8 +542,8 @@ class TitleState extends MusicBeatState
 	{
 		if(textGroup != null && credGroup != null) {
 			var coolText:Alphabet = new Alphabet(0, 0, text, true, false);
-			//coolText.screenCenter(X);
-			coolText.x = 200;
+			coolText.screenCenter(X);
+			//coolText.x = 200;
 			coolText.y += (textGroup.length * 60) + 200 + offset;
 			credGroup.add(coolText);
 			textGroup.add(coolText);
