@@ -10,7 +10,6 @@ import flixel.addons.transition.FlxTransitionableState;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxGroup;
-import flixel.system.FlxSound;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.tweens.FlxTween;
@@ -266,17 +265,18 @@ class StoryMenuState extends MusicBeatState
 			}
 		}
 
-		if(FlxG.sound.music == null) {
-			FlxG.sound.playmusic(Paths.sound.music('StoryMenu'), 0);
-
-			FlxG.sound.music.fadeIn(4, 0, 0.7);
-		}
-
 		if (controls.BACK && !movedBack && !selectedWeek)
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			movedBack = true;
 			MusicBeatState.switchState(new MainMenuState());
+		}
+
+		if (controls.SPACE)
+		{
+			FlxG.sound.play(Paths.sound('scrollMenu'));
+			movedBack = false;
+			MusicBeatState.switchState(new CreditsState());
 		}
 
 		super.update(elapsed);
