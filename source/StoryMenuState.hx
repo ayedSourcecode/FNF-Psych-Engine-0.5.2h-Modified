@@ -267,9 +267,9 @@ class StoryMenuState extends MusicBeatState
 		}
 
 		if(FlxG.sound.music == null) {
-			FlxG.sound.playMusic(Paths.music('StoryMenu'), 0);
+			FlxG.sound.play(Paths.sound('StoryMenu'), 0);
 
-			FlxG.sound.music.fadeIn(4, 0, 0.7);
+			FlxG.sound.fadeIn(4, 0, 0.7);
 		}
 
 		if (controls.BACK && !movedBack && !selectedWeek)
