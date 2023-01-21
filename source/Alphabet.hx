@@ -82,6 +82,8 @@ class Alphabet extends FlxSpriteGroup
 			remove(letter);
 			lettersArray.remove(letter);
 		}
+		
+		{
 		lettersArray = [];
 		splitWords = [];
 		loopNum = 0;
