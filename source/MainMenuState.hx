@@ -219,11 +219,11 @@ class MainMenuState extends MusicBeatState
 				LoadingState.loadAndSwitchState(new PlayState());
 			}
 			
-			if (FlxG.keys.justPressed.7)
+			if (FlxG.keys.justPressed.F10)
 			{
-				PlayState.SONG = Song.loadFromJson('Canell.Really', 'Canell.Really');
-				PlayState.isStoryMode = false;
-				LoadingState.loadAndSwitchState(new PlayState());
+				selectedSomethin = true;
+				FlxG.sound.play(Paths.sound('confirmMenu'));
+				LoadingState.loadAndSwitchState(new CreditsState());
 			}
 
 
