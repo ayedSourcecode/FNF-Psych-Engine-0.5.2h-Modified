@@ -129,11 +129,7 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 84, 0, "V1.5 IS HERE", 20);
-		versionShit.scrollFactor.set();
-		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(versionShit);
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "Pibby Remix", 14);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 0, "Pibby Remix V1.5", 14);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
@@ -215,6 +211,7 @@ class MainMenuState extends MusicBeatState
 			if (FlxG.keys.justPressed.F7)
 			{
 				PlayState.SONG = Song.loadFromJson('Canell.Really', 'Canell.Really');
+				FlxG.sound.play(Paths.sound('SECRET'));
 				PlayState.isStoryMode = false;
 				LoadingState.loadAndSwitchState(new PlayState());
 			}
