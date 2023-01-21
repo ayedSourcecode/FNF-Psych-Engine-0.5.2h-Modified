@@ -589,9 +589,10 @@ class TitleState extends MusicBeatState
 				// credTextShit.visible = true;
 				case 3:
 					#if PSYCH_WATERMARKS
-					addMoreText('ShadowMario', 15);
-					addMoreText('RiverOaken', 15);
-					addMoreText('shubs', 15);
+					addMoreText('KiritoXkiller', 15);
+					addMoreText('Frost-Fire', 15);
+					addMoreText('malke', 15);
+					addMoreText('ayedFNFMaker', 15);
 					#else
 					addMoreText('present');
 					#end
