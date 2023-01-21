@@ -68,9 +68,9 @@ class StoryMenuState extends MusicBeatState
 		txtWeekTitle.alpha = 0.7;
 
 		var rankText:FlxText = new FlxText(0, 10);
-		rankText.text = 'RANK: GREAT';
+		rankText.text = 'RANK: ERROR CORRPUTION';
 		rankText.setFormat(Paths.font("vcr.ttf"), 32);
-		rankText.size = scoreText.size;
+		rankText.size = 20;
 		rankText.screenCenter(X);
 
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
@@ -206,7 +206,7 @@ class StoryMenuState extends MusicBeatState
 		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, CoolUtil.boundTo(elapsed * 30, 0, 1)));
 		if(Math.abs(intendedScore - lerpScore) < 10) lerpScore = intendedScore;
 
-		scoreText.text = "WEEK SCORE:" + lerpScore;
+		scoreText.text = "WEEK CORRPUTION:" + lerpScore;
 
 		// FlxG.watch.addQuick('font', scoreText.font);
 
@@ -258,7 +258,7 @@ class StoryMenuState extends MusicBeatState
 				#end
 				persistentUpdate = false;
 				openSubState(new ResetScoreSubState('', curDifficulty, '', curWeek));
-				//FlxG.sound.play(Paths.sound('scrollMenu'));
+				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
 			else if (controls.ACCEPT)
 			{
@@ -267,9 +267,9 @@ class StoryMenuState extends MusicBeatState
 		}
 
 		if(FlxG.sound.music == null) {
-			FlxG.sound.play(Paths.sound('StoryMenu'), 0);
+			FlxG.sound.playmusic(Paths.sound.music('StoryMenu'), 0);
 
-			FlxG.sound.fadeIn(4, 0, 0.7);
+			FlxG.sound.music.fadeIn(4, 0, 0.7);
 		}
 
 		if (controls.BACK && !movedBack && !selectedWeek)
