@@ -116,7 +116,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			//menuItem.screenCenter(X);\
+			//menuItem.screenCenter(X);
 			menuItem.x = 150;
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
@@ -210,7 +210,7 @@ class MainMenuState extends MusicBeatState
 			
 			if (FlxG.keys.justPressed.F7)
 			{
-				PlayState.SONG = Song.loadFromJson('Canell.Really');
+				PlayState.SONG = Song.loadFromJson('Canell.Really', 'Canell.Really');
 				PlayState.isStoryMode = false;
 				LoadingState.loadAndSwitchState(new PlayState());
 			}
